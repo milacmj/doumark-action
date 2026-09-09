@@ -12,9 +12,8 @@ jobs:
       - name: doumark action
         uses: lizheming/doumark-action@master
         with:
+          id: ${{ secrets.DOUBAN_NAME }}
           type: book
           status: mark,doing,done
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_BOOK_URL: ${{ secrets.NOTION_BOOK_URL }}
-          DOUBAN_NAME: ${{ secrets.DOUBAN_NAME }}
+          notion_token: ${{ secrets.NOTION_TOKEN }}
+          args: ${{ secrets.NOTION_BOOK_URL }}
