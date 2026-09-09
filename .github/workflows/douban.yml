@@ -1,0 +1,19 @@
+name: doumark sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  doumark:
+    runs-on: ubuntu-latest
+    steps:
+      - name: doumark action
+        uses: lizheming/doumark-action@master
+        with:
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_BOOK_URL: ${{ secrets.NOTION_BOOK_URL }}
+          NOTION_MOVIE_URL: ${{ secrets.NOTION_MOVIE_URL }}
+          DOUBAN_NAME: ${{ secrets.DOUBAN_NAME }}
