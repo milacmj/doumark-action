@@ -17,4 +17,5 @@ jobs:
           format: notion
           dir: ${{ secrets.NOTION_BOOK_URL }}
           notion_token: ${{ secrets.NOTION_TOKEN }}
-          status: mark,doing,done
+          status: mark, doing, done
+          cover: true
