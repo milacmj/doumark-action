@@ -14,6 +14,7 @@ jobs:
         with:
           id: ${{ secrets.DOUBAN_NAME }}
           type: book
-          status: mark,doing,done
+          format: notion
+          dir: ${{ secrets.NOTION_BOOK_URL }}
           notion_token: ${{ secrets.NOTION_TOKEN }}
-          args: ${{ secrets.NOTION_BOOK_URL }}
+          status: mark,doing,done
