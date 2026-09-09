@@ -19,4 +19,4 @@ jobs:
           notion_token: ${{ secrets.NOTION_TOKEN }}
           status: mark, doing, done
           cover: true
-          REFRESH: true
+          refresh: true
